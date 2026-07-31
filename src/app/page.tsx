@@ -1,19 +1,16 @@
-import { sections } from "@/catalog/sections";
+"use client";
 
-import { SectionCard } from "@/components/preview/SectionCard/SectionCard";
-import { SectionGrid } from "@/components/preview/SectionGrid/SectionGrid";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Typography } from "@/components/ui/Typography";
-import { getFeaturedSections } from "@/catalog";
-
-const featuredSections = getFeaturedSections();
+import Link from "next/link";
 
 export default function HomePage() {
+
   return (
     <Container>
       <section className="flex min-h-[80vh] flex-col items-center justify-center text-center">
-
+        
         <Typography as="h1" variant="display">
           SFG UI Lab
         </Typography>
@@ -28,26 +25,10 @@ export default function HomePage() {
           React Three Fiber.
         </Typography>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button>Browse Sections</Button>
+        <div className="mt-10 flex flex-wrap justify-center gap-4 pb-4">
+          <Button><Link href="/library">Browse Library</Link></Button>
           <Button variant="outline">Playground</Button>
         </div>
-
-      </section>
-
-      {/* Gallery */}
-
-      <section className="py-20">
-
-        <Typography
-          as="h2"
-          variant="h2"
-          className="mb-8"
-        >
-          Featured Sections
-        </Typography>
-
-        <SectionGrid sections={featuredSections} />
 
       </section>
 

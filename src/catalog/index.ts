@@ -1,15 +1,33 @@
-import { sections } from "./sections";
+import { library } from "./library";
 
 export function getAllSections() {
-  return sections;
+  return library;
 }
 
 export function getFeaturedSections() {
-  return sections.filter((section) => section.featured);
+  return library.filter((section) => section.featured);
 }
 
 export function getSectionsByCategory(category: string) {
-  return sections.filter(
+  return library.filter(
     (section) => section.category === category
   );
+}
+
+export function getSectionBySlug(slug: string) {
+  return library.find((section) => section.slug === slug);
+}
+
+export function getRelatedSections(
+  category: string,
+  currentSlug: string,
+  limit = 3
+) {
+  return library
+    .filter(
+      (section) =>
+        section.category === category &&
+        section.slug !== currentSlug
+    )
+    .slice(0, limit);
 }

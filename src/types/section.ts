@@ -1,10 +1,8 @@
-// types/section.ts
 import { ComponentType } from "react";
 
-export type Difficulty =
-  | "Beginner"
-  | "Intermediate"
-  | "Advanced";
+import type { Category } from "./category";
+import type { Difficulty } from "./difficulty";
+import type { Technology } from "./technology";
 
 export interface SectionMetadata {
   id: string;
@@ -13,7 +11,7 @@ export interface SectionMetadata {
 
   slug: string;
 
-  category: string;
+  category: Category;
 
   description: string;
 
@@ -25,9 +23,15 @@ export interface SectionMetadata {
 
   difficulty?: Difficulty;
 
-  technologies?: string[];
+  technologies?: Technology[];
 
   tags?: string[];
 
   preview?: string;
+
+  author?: string;
+
+  updated?: string;
+
+  buildTime?: string;
 }
