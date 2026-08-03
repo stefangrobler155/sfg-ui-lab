@@ -1,14 +1,11 @@
 // src/components/sections/heroes/AuroraHero/metadata.ts
-import { SectionMetadata } from "@/types/section";
+import { LibraryEntry } from "@/types/library";
 import { Aurora } from "./AuroraHero";
+import preview from "./preview.webp";
 
-export const metadata: SectionMetadata = {
-  id: "aurora-hero",
-
+export const metadata: LibraryEntry = {
   title: "Aurora Hero",
-
   slug: "aurora-hero",
-
   category: "heroes",
 
   description:
@@ -36,8 +33,7 @@ export const metadata: SectionMetadata = {
     "3d",
   ],
 
-  preview:
-    "/preview.webp",
+  preview: preview,
     
   author: "SFG Web",
 

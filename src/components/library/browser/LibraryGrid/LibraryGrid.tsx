@@ -10,7 +10,7 @@ export function LibraryGrid({ sections }: SectionGridProps) {
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {sections.map((section) => (
         <LibraryCard
-          key={section.id}
+          key={section.slug}
           section={section}
         />
       ))}

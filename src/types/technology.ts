@@ -4,4 +4,16 @@ export type Technology =
   | "Framer Motion"
   | "React Three Fiber"
   | "GSAP"
-  | "Lenis";
+  | "Lenis"
+  | "React"
+  | "React Spring"
+  | "React Use Gesture"
+  | "React Three Cannon"
+  | "React Three Drei"
+  | "React Three Fiber"
+  | "React Three Rapier"
+  | "React Three XR"
+  | "Lucide React"
+  | "Three.js"
+  | "TypeScript"
+  | "Vite";

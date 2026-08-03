@@ -1,45 +1,40 @@
-// src/components/sections/heroes/AuroraHero/metadata.ts
-import { SectionMetadata } from "@/types/section";
+import type { LibraryEntry } from "@/types/library";
 import { FeatureGrid } from "./FeatureGrid";
+import preview from "./preview.webp";
 
-export const metadata: SectionMetadata = {
-  id: "feature-grid",
-
+export const metadata: LibraryEntry = {
   title: "Feature Grid",
 
   slug: "feature-grid",
-
+  
   category: "features",
 
   description:
-    "A responsive grid for displaying features and benefits.",
-
-  component: FeatureGrid,
-
-  featured: false,
+    "A responsive feature section with six feature cards.",
 
   version: "1.0.0",
 
-  difficulty: "Advanced",
+  difficulty: "Beginner",
 
   technologies: [
-    "Next.js",
+    "React",
     "Tailwind CSS",
-    "Framer Motion",
-    "React Three Fiber",
+    "Lucide React",
   ],
 
   tags: [
-    "features",
-    "grid",
-    "responsive",
-    "benefits",
+    "Features",
+    "Marketing",
+    "Landing Page",
+    "Responsive",
   ],
 
-  
-    author: "SFG Web",
+  featured: true,
+  author: "SFG UI Lab",
+  updated: "2025-08-02",
+  buildTime: "2025-08-02T00:00:00.000Z",
 
-  updated: "2026-07-29",
+  preview: preview,
 
-  buildTime: "3 hours",
+  component: FeatureGrid,
 };

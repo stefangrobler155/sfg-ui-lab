@@ -1,14 +1,11 @@
 // src/components/sections/heroes/WinterWonder/metadata.ts
-import { SectionMetadata } from "@/types/section";
+import { LibraryEntry } from "@/types/library";
 import { WinterWonder } from "./WinterWonder";
+import preview from "./preview.webp";
 
-export const metadata: SectionMetadata = {
-  id: "winter-wonder",
-
+export const metadata: LibraryEntry = {
   title: "Winter Wonder",
-
   slug: "winter-wonder",
-
   category: "heroes",
 
   description:
@@ -37,8 +34,7 @@ export const metadata: SectionMetadata = {
     "3d",
   ],
 
-  preview:
-    "/preview.webp",
+  preview: preview,
     
   author: "SFG Web",
 
